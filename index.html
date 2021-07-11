@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,29 +16,79 @@
 </head>
 <body>
 
-  Bill
+  <div class="logo-section">
+  </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <div class="calculator-div">
+    <div class="content-container">
+        <div class="calculator-half input-section">
+      <!---------Bill Section ------------>
+            <div class="bill-section">
+                <p>Bill</p>
+                <div class="bill-input-div">
+                    <img src="images/icon-dollar.svg" alt="dollar sign" />
+                    <label for="dollar-amount">
+                        <input type="text" id="dollar-amount" name="dollar-amount" placeholder="0"/>
+                    </label>
+                </div>
+            </div>
+      <!--------- Tip Section ------------->
+            <div class="tip-button-section">
+                <p>Select Tip %</p>
+                <div class="button-grid">
+                    <button type="button" class="5-percent">5%</button>
+                    <button type="button" class="10-percent">10%</button>
+                    <button type="button" class="15-percent">15%</button>
+                    <button type="button" class="25-percent">25%</button>
+                    <button type="button" class="50-percent">50%</button>
+                    <label for="custom-tip">
+                        <input type="text" id="custom-tip" name="custom-tip" placeholder="Custom" />
+                    </label>
+                </div>
+            </div>
+<!---------- Number of People Section ----------->
+            <div class="people-section">
+                <p>Number of People</p>
+                <div class="people-input-div">
+                    <img src="images/icon-person.svg" alt="number of people icon" />
+                    <label for="people-amount">
+                        <input type="text" id="people-amount" name="people-amount" placeholder="0"/>
+                    </label>
+                </div>
+            </div>
+        </div>
 
-  Number of People
+        <div class="calculator-half output-section">
+            <div class="tip-output-section">
+                <div class="tip-output-half">
+                    <p>Tip Amount</p>
+                    <p class="per-person">/ person</p>
+                </div>
+                <div class="tip-output-half">
+                    <p><span>$0.00</span></p>
+                </div>
+            </div>
 
-  Tip Amount
-  / person
+            <div class="total-output-section">
+                <div class="total-output-half">
+                    <p>Total</p>
+                    <p class="per-person">/ person</p>
+                </div>
+                <div class="total-output-half">
+                    <p><span>$0.00</span></p>
+                </div>
+            </div>
+            <button type="reset" class="reset-button">Reset</button>
+        </div>
+  <!--End of Main Content -->
+    </div>
+  </div>
 
-  Total
-  / person
 
-  Reset
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.lesleywesley.com/">Lesley Wesley</a>.
   </div>
 </body>
 </html>
