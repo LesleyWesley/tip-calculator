@@ -17,10 +17,11 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 25px;
+  padding: 35px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  margin-top: 25px;
+  margin-top: 50px;
+  /*max-width: 900px;*/
 }
 
 p {
@@ -147,4 +148,49 @@ p.per-person {
   border-radius: 5px;
   background-color: #26C0AB;
   color: #004A4D;
+}
+
+@media (min-width: 1024px) {
+
+  .calculator-div {
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 25px;
+    align-items: stretch;
+  }
+
+  .calculator-half {
+    width: 45%;
+  }
+
+  .button-grid {
+    width: 100%;
+  }
+
+  .bill-input-div input,
+  .people-input-div input {
+    width: 100%;
+  }
+
+
+
+  .button-grid button {
+    width: 32%;
+    font-size: .75em;
+  }
+
+
+
+  .button-grid label {
+    width: 32%;
+  }
+
+  .button-grid input[placeholder] {
+    font-size: .75em;
+    padding: 10px 0;
+  }
+
+  .people-input-div {
+    margin-bottom: 0;
+  }
 }
