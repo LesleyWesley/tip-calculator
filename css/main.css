@@ -31,7 +31,8 @@ p {
   margin-bottom: 5px;
 }
 
-.bill-input-div {
+.bill-input-div,
+.people-input-div {
   background-color: #F4FAFA;
   border-radius: 5px;
   padding: 0px 15px;
@@ -73,6 +74,7 @@ input[type=number]:focus {
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .button-grid button {
@@ -96,4 +98,53 @@ input[type=number]:focus {
   width: 100%;
   padding: 7px 10px 7px 0;
   border-radius: 5px;
+}
+
+/*===== OUTPUT SECTION - MOBILE ====== */
+
+.output-section {
+  background-color: #004A4D;
+  width: 90%;
+  padding: 25px 15px 15px 15px;
+  border-radius: 15px;
+}
+
+.tip-output-section,
+.total-output-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output-section p {
+  color: #F4FAFA;
+  font-size: .6em;
+}
+
+.per-person {
+  margin-top: 0;
+}
+
+p.per-person {
+  font-size: .5em;
+  color: #5E7A7D;
+}
+
+.tip-output-half span,
+.total-output-half span {
+  font-size: 1.75em;
+  color: #26C0AB
+}
+
+.output-section button {
+  width: 100%;
+  font-family: "Space Mono", sans-serif;
+  font-size: .7em;
+  font-weight: 700;
+  padding: 8px 0;
+  margin: 25px 0 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #26C0AB;
+  color: #004A4D;
 }
