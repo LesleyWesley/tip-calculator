@@ -24,7 +24,7 @@ body {
 }
 
 p {
-  font-size: .6em;
+  font-size: .65em;
   font-weight: 700;
   padding: 0;
   color: #7F9C9F;
@@ -38,6 +38,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 35px;
 }
 
 .bill-input-div img {
@@ -50,15 +51,49 @@ label {
   align-items: center;
 }
 
-input[type=text] {
+input[type=number] {
   font-size: .95em;
   text-align: right;
   color: #004A4D;
   font-family: "Space Mono", sans-serif;
   background-color: #F4FAFA;
   border: none;
+  font-weight: 700;
 }
 
-input[type=text]:active {
+input[type=number]:focus {
+  outline: none;
+}
+
+/*--- TIP SELECTION SECTION ---*/
+
+.button-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.button-grid button {
+  font-size: .95em;
+  padding: 7px 0;
+  font-family: "Space Mono", sans-serif;
+  margin: 5px 0;
+  color: #F4FAFA;
+  background-color: #004A4D;
   border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  width: 48%;
+}
+
+.button-grid label {
+  width: 47%;
+}
+
+.button-grid input {
+  width: 100%;
+  padding: 7px 10px 7px 0;
+  border-radius: 5px;
 }
