@@ -152,6 +152,7 @@ p.per-person {
 
 @media (min-width: 1024px) {
 
+
   .calculator-div {
     flex-direction: row;
     justify-content: space-between;
@@ -192,5 +193,9 @@ p.per-person {
 
   .people-input-div {
     margin-bottom: 0;
+  }
+
+  .total-output-section{
+    margin-bottom: 100px;
   }
 }
