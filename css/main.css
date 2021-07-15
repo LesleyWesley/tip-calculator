@@ -153,6 +153,7 @@ p.per-person {
 @media (min-width: 1024px) {
 
 
+
   .calculator-div {
     flex-direction: row;
     justify-content: space-between;
@@ -164,6 +165,10 @@ p.per-person {
     width: 45%;
   }
 
+  .input-section {
+    margin-right: 50px;
+  }
+
   .button-grid {
     width: 100%;
   }
@@ -173,11 +178,9 @@ p.per-person {
     width: 100%;
   }
 
-
-
   .button-grid button {
-    width: 32%;
     font-size: .75em;
+    width: 32%;
   }
 
 
@@ -195,7 +198,17 @@ p.per-person {
     margin-bottom: 0;
   }
 
+
   .total-output-section{
     margin-bottom: 100px;
+  }
+
+  .output-section {
+    padding: 40px;
+  }
+
+  .tip-output-half span,
+  .total-output-half span {
+    font-size: 2em;
   }
 }
