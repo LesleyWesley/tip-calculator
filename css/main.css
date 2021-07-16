@@ -41,6 +41,7 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 35px;
+  border: 2px solid #F4FAFA;
 }
 
 .bill-input-div img {
@@ -93,12 +94,32 @@ input[type=number]:focus {
 
 .button-grid label {
   width: 47%;
+  border: 2px solid #F4FAFA;
+  border-radius: 5px;
 }
 
 .button-grid input {
   width: 100%;
   padding: 7px 10px 7px 0;
   border-radius: 5px;
+}
+
+.people-section p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.people-section span {
+  color: orange;
+}
+
+.people-section .validation {
+  border-color: orange;
+}
+
+.hide {
+  display: none;
 }
 
 /*===== OUTPUT SECTION - MOBILE ====== */
@@ -148,6 +169,34 @@ p.per-person {
   border-radius: 5px;
   background-color: #26C0AB;
   color: #004A4D;
+}
+
+/*======== ACTIVE STATES ============ */
+
+.bill-input-div:hover {
+  border-color: #26C0AB;
+  cursor: pointer;
+}
+
+.people-input-div:hover {
+  border-color: #26C0AB;
+  cursor: pointer;
+}
+
+.button-grid button:hover {
+  background-color: #C5E4E7;
+  color: #004A4D;
+  cursor: pointer;
+}
+
+.button-grid label:hover {
+  border-color: #26C0AB;
+  cursor: pointer;
+}
+
+.output-section button:hover {
+  background-color: #C5E4E7;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
