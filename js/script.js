@@ -1,6 +1,8 @@
 // Selects Bill Input Section
 
-const billAmount = document.querySelector(".bill-input-div input");
+const billAmountInput = document.querySelector(".bill-input-div input");
+const billAmount = billAmountInput.value;
+
 
 //Selects Percentage Buttons
 
@@ -16,11 +18,14 @@ const percent50 = document.querySelector(".percent50");
 
 //Selects Custom Tip input
 
-const customTip = document.querySelector("#custom-tip");
+const customTipInput = document.querySelector("#custom-tip");
+const customTip = customTipInput.value;
+
 
 //Selects Number of People input
 
-const numPeople = document.querySelector("#people-amount");
+const numPeopleInput = document.querySelector("#people-amount");
+const numPeople = numPeopleInput.value;
 
 //Selects Tip Amount Output
 
@@ -34,5 +39,19 @@ const totalAmountOutput = document.querySelector(".total-output-half span");
 
 const resetButton = document.querySelector(".reset-button");
 
+let tipMultiplier = 0;
 
 //===========================================================
+
+//   Adds Event Listener for "Enter" Button
+
+document.addEventListener("keydown", function (e) {
+  //console.log(e);
+  if (e.key === "Enter") {
+
+  }
+});
+
+//=========================================================
+
+//  Adds Event Listener for Tip Buttons
