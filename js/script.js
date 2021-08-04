@@ -16,6 +16,7 @@ const percent25 = document.querySelector(".percent25");
 
 const percent50 = document.querySelector(".percent50");
 
+
 //Selects Custom Tip input
 
 const customTipInput = document.querySelector("#custom-tip");
@@ -26,6 +27,9 @@ const customTip = customTipInput.value;
 
 const numPeopleInput = document.querySelector("#people-amount");
 const numPeople = numPeopleInput.value;
+const peopleValidatorSection = document.querySelector(".people-section span");
+const peopleInputDiv = document.querySelector(".people-input-div");
+console.log(peopleInputDiv);
 
 //Selects Tip Amount Output
 
@@ -43,15 +47,44 @@ let tipMultiplier = 0;
 
 //===========================================================
 
-//   Adds Event Listener for "Enter" Button
+// Click events for tip Buttons
 
-document.addEventListener("keydown", function (e) {
-  //console.log(e);
-  if (e.key === "Enter") {
-
+percent5.addEventListener("click", function() {
+  if (percent5.classList.contains("active")) {
+    percent5.classList.remove("active");
+  } else {
+    percent5.classList.add("active");
   }
-});
+})
 
-//=========================================================
+percent10.addEventListener("click", function() {
+  if (percent10.classList.contains("active")) {
+    percent10.classList.remove("active");
+  } else {
+    percent10.classList.add("active");
+  }
+})
 
-//  Adds Event Listener for Tip Buttons
+percent15.addEventListener("click", function() {
+  if (percent15.classList.contains("active")) {
+    percent15.classList.remove("active");
+  } else {
+    percent15.classList.add("active");
+  }
+})
+
+percent25.addEventListener("click", function() {
+  if (percent25.classList.contains("active")) {
+    percent25.classList.remove("active");
+  } else {
+    percent25.classList.add("active");
+  }
+})
+
+percent50.addEventListener("click", function() {
+  if (percent50.classList.contains("active")) {
+    percent50.classList.remove("active");
+  } else {
+    percent50.classList.add("active");
+  }
+})
