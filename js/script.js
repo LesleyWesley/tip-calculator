@@ -53,6 +53,7 @@ percent5.addEventListener("click", function() {
   if (percent5.classList.contains("active")) {
     percent5.classList.remove("active");
   } else {
+    removeActive();
     percent5.classList.add("active");
   }
 })
@@ -61,6 +62,7 @@ percent10.addEventListener("click", function() {
   if (percent10.classList.contains("active")) {
     percent10.classList.remove("active");
   } else {
+    removeActive();
     percent10.classList.add("active");
   }
 })
@@ -69,6 +71,7 @@ percent15.addEventListener("click", function() {
   if (percent15.classList.contains("active")) {
     percent15.classList.remove("active");
   } else {
+    removeActive();
     percent15.classList.add("active");
   }
 })
@@ -77,6 +80,7 @@ percent25.addEventListener("click", function() {
   if (percent25.classList.contains("active")) {
     percent25.classList.remove("active");
   } else {
+    removeActive();
     percent25.classList.add("active");
   }
 })
@@ -85,6 +89,47 @@ percent50.addEventListener("click", function() {
   if (percent50.classList.contains("active")) {
     percent50.classList.remove("active");
   } else {
+    removeActive();
     percent50.classList.add("active");
   }
 })
+
+
+//===============================================
+
+//Removes "active" class from tip Buttons
+
+const removeActive = function () {
+  if (percent5.classList.contains("active")) {
+    percent5.classList.remove("active");
+  } else if (percent10.classList.contains("active")) {
+    percent10.classList.remove("active");
+  } else if (percent15.classList.contains("active")) {
+    percent15.classList.remove("active");
+  } else if (percent25.classList.contains("active")) {
+    percent25.classList.remove("active");
+  } else if (percent50.classList.contains("active")) {
+    percent50.classList.remove("active");
+  }
+}
+
+//=============================================
+
+//Removes "active" class from tip buttons if custom tip is clicked
+
+customTipInput.addEventListener("click", function () {
+  removeActive();
+})
+
+//=============================================
+
+//Calculates Tip Amount
+
+const calculateTip = function () {
+  if (customTip !== "") {
+    tipMultiplier = customTip / 100;
+    console.log(tipMultiplier);
+  }
+}
+
+calculateTip();
