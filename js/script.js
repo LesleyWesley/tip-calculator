@@ -20,16 +20,15 @@ const percent50 = document.querySelector(".percent50");
 //Selects Custom Tip input
 
 const customTipInput = document.querySelector("#custom-tip");
-const customTip = customTipInput.value;
 
 
 //Selects Number of People input
 
 const numPeopleInput = document.querySelector("#people-amount");
-const numPeople = numPeopleInput.value;
+
 const peopleValidatorSection = document.querySelector(".people-section span");
 const peopleInputDiv = document.querySelector(".people-input-div");
-console.log(peopleInputDiv);
+
 
 //Selects Tip Amount Output
 
@@ -43,7 +42,7 @@ const totalAmountOutput = document.querySelector(".total-output-half span");
 
 const resetButton = document.querySelector(".reset-button");
 
-let tipMultiplier = 0;
+
 
 //===========================================================
 
@@ -54,6 +53,7 @@ percent5.addEventListener("click", function() {
     percent5.classList.remove("active");
   } else {
     removeActive();
+    customTipInput.value = "";
     percent5.classList.add("active");
   }
 })
@@ -125,11 +125,39 @@ customTipInput.addEventListener("click", function () {
 
 //Calculates Tip Amount
 
-const calculateTip = function () {
-  if (customTip !== "") {
-    tipMultiplier = customTip / 100;
-    console.log(tipMultiplier);
+// !! NEEDS WORK - NOT WORKING !!
+
+const calculateTipPercentage = function () {
+  let tipMultiplier = 0;
+
+  if (customTipInput.value !== "") {
+    tipMultiplier === customTipInput.value / 100;
+  } else if (percent5.classList.contains("active")) {
+    tipMultiplier === .05;
+  } else if (percent10.classList.contains("active")) {
+    tipMultiplier === .1;
+  } else if (percent15.classList.contains("active")) {
+    tipMultiplier === .15;
+  } else if (percent25.classList.contains("active")) {
+    tipMultiplier === .25;
+  } else if (percent50.classList.contains("active")) {
+    tipMultiplier === .5;
   }
+
 }
 
-calculateTip();
+calculateTipPercentage();
+
+//===============================================
+
+//Validates People Input
+
+const validatePeople = function () {
+  if (numPeopleInput.value === 0) {
+    peopleValidatorSection.classList.remove("hide");
+    peopleInputDiv.classList.add("validation");
+  } else {
+    peopleValidatorSection.classList.add("hide");
+    peopleInputDiv.classList.remove("validation");
+  }
+}

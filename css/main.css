@@ -112,6 +112,7 @@ input[type=number]:focus {
 
 .people-section span {
   color: orange;
+  font-size: .8em;
 }
 
 .people-section .validation {
