@@ -42,6 +42,7 @@ const totalAmountOutput = document.querySelector(".total-output-half span");
 
 const resetButton = document.querySelector(".reset-button");
 
+let tipMultiplier = 0;
 
 
 //===========================================================
@@ -55,6 +56,7 @@ percent5.addEventListener("click", function() {
     removeActive();
     customTipInput.value = "";
     percent5.classList.add("active");
+    tipMultiplier = .05;
   }
 })
 
@@ -65,6 +67,7 @@ percent10.addEventListener("click", function() {
     removeActive();
     customTipInput.value = "";
     percent10.classList.add("active");
+    tipMultiplier = .1;
   }
 })
 
@@ -75,6 +78,7 @@ percent15.addEventListener("click", function() {
     removeActive();
     customTipInput.value = "";
     percent15.classList.add("active");
+    tipMultiplier = .15;
   }
 })
 
@@ -85,6 +89,7 @@ percent25.addEventListener("click", function() {
     removeActive();
     customTipInput.value = "";
     percent25.classList.add("active");
+    tipMultiplier = .25;
   }
 })
 
@@ -95,6 +100,7 @@ percent50.addEventListener("click", function() {
     removeActive();
     customTipInput.value = "";
     percent50.classList.add("active");
+    tipMultiplier = .5;
   }
 })
 
@@ -127,31 +133,10 @@ customTipInput.addEventListener("click", function () {
 
 //=============================================
 
-//Calculates Tip Amount
 
-// !! NEEDS WORK - NOT WORKING !!
 
-const calculateTipPercentage = function () {
-  let tipMultiplier = 0;
 
-  if (customTipInput.value !== "") {
-    tipMultiplier === customTipInput.value / 100;
-  } else if (percent5.classList.contains("active")) {
-    tipMultiplier === .05;
-  } else if (percent10.classList.contains("active")) {
-    tipMultiplier === .1;
-  } else if (percent15.classList.contains("active")) {
-    tipMultiplier === .15;
-  } else if (percent25.classList.contains("active")) {
-    tipMultiplier === .25;
-  } else if (percent50.classList.contains("active")) {
-    tipMultiplier === .5;
-  }
-  console.log(tipMultiplier);
 
-}
-
-calculateTipPercentage();
 
 //===============================================
 
