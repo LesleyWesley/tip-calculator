@@ -63,6 +63,7 @@ percent10.addEventListener("click", function() {
     percent10.classList.remove("active");
   } else {
     removeActive();
+    customTipInput.value = "";
     percent10.classList.add("active");
   }
 })
@@ -72,6 +73,7 @@ percent15.addEventListener("click", function() {
     percent15.classList.remove("active");
   } else {
     removeActive();
+    customTipInput.value = "";
     percent15.classList.add("active");
   }
 })
@@ -81,6 +83,7 @@ percent25.addEventListener("click", function() {
     percent25.classList.remove("active");
   } else {
     removeActive();
+    customTipInput.value = "";
     percent25.classList.add("active");
   }
 })
@@ -90,6 +93,7 @@ percent50.addEventListener("click", function() {
     percent50.classList.remove("active");
   } else {
     removeActive();
+    customTipInput.value = "";
     percent50.classList.add("active");
   }
 })
@@ -143,6 +147,7 @@ const calculateTipPercentage = function () {
   } else if (percent50.classList.contains("active")) {
     tipMultiplier === .5;
   }
+  console.log(tipMultiplier);
 
 }
 
@@ -150,7 +155,7 @@ calculateTipPercentage();
 
 //===============================================
 
-//Validates People Input
+//Makes sure People Input is more than zero
 
 const validatePeople = function () {
   if (numPeopleInput.value === 0) {
