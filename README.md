@@ -48,13 +48,12 @@ I actually ended up taking a break from this project midway through.  I'd writte
 
 ### What I learned
 
-Definitely got some good practice working with input fields and different calculations.  The JS functionality for the tip buttons gave me more issues than expected (as of writing this, I'm still working on the project, but the buttons now work), so it was great getting some practice there, as well.  
+Definitely got some good practice working with input fields and different calculations.  The JS functionality for the tip buttons gave me more issues than expected, so it was great getting some practice there, as well.  
 
-I'm still working on making the custom tip input work.  I've written code where I can get it to work, but then the tip buttons do nothing, and I've also written it so the tip buttons work but the custom tip input does nothing.  I feel like there's a stupid simple solution to this issue that I'm just not seeing, but I've run out of time today, so I'll have to continue work tomorrow.  
 
 
 ### Continued development
 
 I learned how to work with grid while taking a break from this project. I'd already written  the html and css for this project, but if I were to build it again, I would absolutely use grid in the Tip Buttons section.
 
-Since there wasn't a submit button on the design, I wasn't sure how exactly to initiate the calculations.  I ended up making it all happen when the user presses "Enter", but I should do more research on how other developers address this problem.  Looking at someone else's solution to this project, they initiated everything after the people input gets filled in, so I suppose that's an option.  
+Since there wasn't a submit button on the design, I wasn't sure how exactly to initiate the calculations.  I ended up making it all happen when the user presses "Enter", but I should do more research on how other developers address this problem.  Looking at someone else's solution to this project, they initiated everything after the "people" input gets filled in, so I suppose that's an option.  
