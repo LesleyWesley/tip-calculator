@@ -6,7 +6,7 @@ body {
   flex-direction: column;
   background-color: #C5E4E7;
   font-family: "Space Mono", sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 50px 0 0 0;
   margin: 0;
 }
@@ -67,6 +67,13 @@ input[type=number] {
 input[type=number]:focus {
   outline: none;
 }
+
+button:active {
+  transform: scale(.9);
+}
+
+
+
 
 /*--- TIP SELECTION SECTION ---*/
 
@@ -210,7 +217,9 @@ p.per-person {
 
 @media (min-width: 1024px) {
 
-
+  body {
+    font-size: 1.5em;
+  }
 
   .calculator-div {
     flex-direction: row;

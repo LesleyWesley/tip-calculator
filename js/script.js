@@ -51,6 +51,7 @@ let tipMultiplier = 0;
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     validatePeople();
+    calculateCustom();
     calculateTip();
     calculateBill();
   }
@@ -146,6 +147,15 @@ customTipInput.addEventListener("click", function () {
 
 //=============================================
 
+// Calculates custom tip Amount
+
+const calculateCustom = function () {
+  if (customTipInput.value !== "") {
+    tipMultiplier = customTipInput.value / 100;
+  } else {
+    return tipMultiplier;
+  }
+}
 
 
 //=============================================
