@@ -40,6 +40,7 @@ const totalAmountOutput = document.querySelector(".total-output-half span");
 //Selects Reset Button
 
 const resetButton = document.querySelector(".reset-button");
+console.log(resetButton);
 
 let tipMultiplier = 0;
 
@@ -50,11 +51,25 @@ let tipMultiplier = 0;
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
-    validatePeople();
+    //validatePeople();
     calculateCustom();
     calculateTip();
     calculateBill();
   }
+})
+
+//=============================================
+
+// Adds functionality to Reset button
+
+resetButton.addEventListener("click", function () {
+  billAmountInput.value = "";
+  removeActive();
+  customTipInput.value = "";
+  numPeopleInput.value = "";
+  tipOutput.innerText = "$0.00";
+  totalAmountOutput.innerText = "$0.00";
+
 })
 
 //==============================================
@@ -162,13 +177,14 @@ const calculateCustom = function () {
 
 //Makes sure People Input is more than zero
 
+// !! NOT WORKING - NEEDS MORE WORK !! //
+
 const validatePeople = function () {
-  if (numPeopleInput.value === 0) {
+  if (numPeopleInput.value = 0) {
     peopleValidatorSection.classList.remove("hide");
     peopleInputDiv.classList.add("validation");
   } else {
-    peopleValidatorSection.classList.add("hide");
-    peopleInputDiv.classList.remove("validation");
+    return numPeopleInput.value;
   }
 }
 
