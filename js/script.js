@@ -51,7 +51,7 @@ let tipMultiplier = 0;
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
-    //validatePeople();
+    validatePeople();
     calculateCustom();
     calculateTip();
     calculateBill();
@@ -131,8 +131,6 @@ percent50.addEventListener("click", function() {
   }
 })
 
-// !! Remember to add tip multiplier calculator for custom input to main function!
-
 
 //===============================================
 
@@ -179,13 +177,14 @@ const calculateCustom = function () {
 
 // !! NOT WORKING - NEEDS MORE WORK !! //
 
+// Currently validates and applies styling if number is zero, but doesn't remove styling once the issue is fixed.  Also ends function so calculator can't be used until page is reloaded 
+
 const validatePeople = function () {
-  if (numPeopleInput.value = 0) {
+  if (numPeopleInput.value === "0") {
     peopleValidatorSection.classList.remove("hide");
     peopleInputDiv.classList.add("validation");
-  } else {
-    return numPeopleInput.value;
   }
+
 }
 
 //=============================================
