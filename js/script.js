@@ -70,6 +70,8 @@ resetButton.addEventListener("click", function () {
   numPeopleInput.value = "";
   tipOutput.innerText = "$0.00";
   totalAmountOutput.innerText = "$0.00";
+  peopleValidatorMessage.classList.add('hide');
+  peopleInputDiv.classList.remove("validation");
 
 })
 
