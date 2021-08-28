@@ -24,7 +24,7 @@ const customTipInput = document.querySelector("#custom-tip");
 
 const numPeopleInput = document.querySelector("#people-amount");
 
-const peopleValidatorSection = document.querySelector(".people-section span");
+const peopleValidatorMessage = document.querySelector(".people-section span");
 
 const peopleInputDiv = document.querySelector(".people-input-div");
 
@@ -45,6 +45,7 @@ console.log(resetButton);
 let tipMultiplier = 0;
 
 
+
 //===========================================================
 
 //Main Function
@@ -52,6 +53,7 @@ let tipMultiplier = 0;
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     calculateCustom();
+    validatePeople();
     calculateTip();
     calculateBill();
   }
@@ -159,6 +161,20 @@ customTipInput.addEventListener("click", function () {
 
 //=============================================
 
+//Validates amount of people
+
+const validatePeople = function () {
+  if (numPeopleInput.value < 1) {
+    peopleValidatorMessage.classList.remove("hide");
+    peopleInputDiv.classList.add("validation");
+  } else {
+    peopleValidatorMessage.classList.add("hide");
+    peopleInputDiv.classList.remove("validation");
+  }
+}
+
+//=============================================
+
 // Calculates custom tip Amount
 
 const calculateCustom = function () {
@@ -175,7 +191,7 @@ const calculateCustom = function () {
 //Calculates and populates total bill per person
 
 const calculateBill = function () {
-  if (peopleValidatorSection.classList.contains("hide")) {
+  if (peopleValidatorMessage.classList.contains("hide")) {
     const billTotal = billAmountInput.value / numPeopleInput.value;
     const officialBillTotal = billTotal.toFixed(2);
     totalAmountOutput.innerText = "$" + officialBillTotal;
@@ -187,7 +203,7 @@ const calculateBill = function () {
 //Calculates and populates tip per person
 
 const calculateTip = function () {
-  if (peopleValidatorSection.classList.contains("hide")) {
+  if (peopleValidatorMessage.classList.contains("hide")) {
     const tipTotal = billAmountInput.value * tipMultiplier;
     const tipPerPerson = tipTotal / numPeopleInput.value;
     const officialTip = tipPerPerson.toFixed(2);
